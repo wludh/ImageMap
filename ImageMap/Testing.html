@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="lib/jquery-2.2.0.min.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/layout.js"></script>
+    <script src="src/debug.js"></script>
+    <script src="src/data.js"></script>
+    <!--<script src="src/panZoom.js"></script>-->
+
+    <link type="text/css" rel="stylesheet" href="css/ImageMap.css" />
+</head>
+<body>
+    <!-- Define the position and size of the ImageMap container -->
+    <style type="text/css">
+        #imContainer {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            bottom: 50px;
+            left: 50px;
+            border: 1px solid Gray;
+        }
+    </style>
+
+    <!-- Create a Image-Map container if you want to control the position and size -->
+    <div id="imContainer"></div>
+
+    <script type="text/javascript">
+        // Define your ImageMap configuration overrides
+        var config = {};
+        config.container = "imContainer"; // container id - If omitted, a whole-page container will be created
+        config.orientation = 'horizontal'; // horizontal or vertical
+        config.detailsWidth = 40; // percent
+        config.title = "Sample Image-Map";
+        config.instructions = "<h2>Instructions:</h2>Sample Image-Map instructions...";
+        config.debugEnabled = true;
+
+        // Initialize the ImageMap
+        ImageMap.init(config);
+
+        // Create an array of image data
+        var data = [];
+        data.push({ image: "https://en.wikipedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg", title: "Mona Lisa", details: "The \"Mona Lisa\", by Leonardo da Vinci." });
+ 
+        // Load JSON Data
+        ImageMap.loadJSON(data);
+
+    </script>
+</body>
+</html>

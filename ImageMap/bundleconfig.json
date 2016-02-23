@@ -1,0 +1,12 @@
+[
+  {
+    "outputFileName": "dist/ImageMap.js",
+    "inputFiles": [
+      "lib/jquery-2.2.0.min.js",
+      "src/main.js",
+      "src/data.js",
+      "src/layout.js",
+      "src/debug.js"
+    ]
+  }
+]
